@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: Display SHA code
         run: |
-          echo ${GITHUB_SHA}
+          echo ${GITHUB_SHA::8}

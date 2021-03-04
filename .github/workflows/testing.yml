@@ -17,5 +17,4 @@ jobs:
 
     steps:
       - name: Display SHA code
-        run: |
-          run: tmp/script.sh ${GITHUB_SHA::8}
+        run: tmp/script.sh ${GITHUB_SHA::8}

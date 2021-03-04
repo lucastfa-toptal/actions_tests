@@ -1,0 +1,24 @@
+name: Schema check
+
+on:
+  workflow_dispatch:
+    inputs:
+      service_name:
+        description: 'Desired service to replace'
+        required: false
+
+      schema_url:
+        description: 'Schema URL to replace inside database related to service_name'
+        required: false
+
+jobs:
+  generate_types_and_ts_check:
+    runs-on: ubuntu-latest
+
+    env:
+      SHA8: ${GITHUB_SHA::8}
+
+    steps:
+      - name: Display SHA code
+        run: |
+          echo $SHA8

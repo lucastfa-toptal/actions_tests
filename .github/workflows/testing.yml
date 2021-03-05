@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Display SHA code
-        run: tmp/script.sh ${GITHUB_SHA::8}
+        run: tmp/scriptssss.sh ${GITHUB_SHA::8}
 
       - name: Notify if success
         if: ${{ success() }}

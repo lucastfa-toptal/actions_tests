@@ -21,3 +21,13 @@ jobs:
 
       - name: Display SHA code
         run: tmp/script.sh ${GITHUB_SHA::8}
+
+      - name: Notify if success
+        if: ${{ success() }}
+        run: |
+          echo "Success"
+
+      - name: Notify if failure
+        if: ${{ failure() }}
+        run: |
+          echo "Failure"
